@@ -20,7 +20,7 @@ Assurez-vous d'avoir **Python 3.8+** installé sur votre machine.
 Clonez le dépôt, puis installez les dépendances nécessaires en utilisant :
 
 ```bash
-pip install fastapi sqlalchemy databases uvicorn
+pip install -r requirements.txt
 ```
 
 ## Lancer le projet
@@ -35,17 +35,14 @@ L'API sera accessible par défaut à l'adresse http://localhost:3000.
 
 ## Tests
 
-Les tests sont à effectuer dans les fichiers du dossier `__tests__`.
+Les tests sont à effectuer dans les fichiers du dossier `tests`.
 
 ### Exécution des tests
 
-- Utilisez la fonction `expect()` pour effectuer les vérifications.
-- Utilisez `.mockImplementation` si vous avez besoin de forcer une fonction à prendre des valeurs spécifiques pour vos tests.
-- Utilisez `.mockReturnValue` si vous avez besoin de forcer une fonction à retourner des valeurs spécifiques pour vos tests.
-- Utilisez `.mockResolvedValue` pour forcer une fonction à retourner une valeur dans une Promise résolue, utile pour les fonctions asynchrones.
+- Utilisez la fonction `assert` pour vérifier les réponses et le comportement de l’API.
 
 Pour lancer les tests, utilisez la commande suivante :
 
 ```bash
-npm run test
+pytest
 ```
